@@ -152,7 +152,7 @@ export class SignUpPage{
         // click on register account button
         cy.get('#submitAccount').should("be.visible").click()
         cy.wait(2000)
-        cy.get('.page-heading').contains("My Account")
+        cy.get('.page-heading').contains("My account")
 
     }
 
