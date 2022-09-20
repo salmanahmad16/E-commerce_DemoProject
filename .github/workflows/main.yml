@@ -1,10 +1,14 @@
-name: Cypress test3
+name: Cypress tests-4
 on: [push]
 jobs:
   cypress-run:
-    runs-on: macos-10.15
+    name: Cypress run
+    runs-on: ubuntu-20.04
     steps:
-    - name: Cypress.io
-      uses: cypress-io/github-action@v4.2.0
-      with:
-        start: npm run startTest
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/eCommerce/tests/e2e_test.cy.js
