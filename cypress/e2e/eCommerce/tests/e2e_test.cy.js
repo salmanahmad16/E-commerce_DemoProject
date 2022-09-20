@@ -27,16 +27,16 @@ describe("End to End Test - E commerce website", function(){
     })
 
     it("Should create new account and fill the form - Positive Test", function(){
-        signup.ValidcreateAccount("leotheking@yutube.com")
+        signup.ValidcreateAccount("leothekingkhan@yutube.com")
         signup.fillRegistrationForm("khan","new khan", "123456","khan", "new khan","humari apni", "abc 12345", "abc12345 Raiwind road lahore", "Lahore","75000","Additoinal info is here","09004374433","090033344433","khan@gmail.com")
     })
 
     it("Should Login the account - Positive Test", function(){
-        login.validLogin("leotheking@yutube.com", "123456")     // Valid Email and password
+        login.validLogin("leothekingkhan@yutube.com", "123456")     // Valid Email and password
     })
 
     it("Should interaction with Home and its products", function(){
-        login.validLogin("leotheking@yutube.com", "123456")     // Valid Email and password
+        login.validLogin("leothekingkhan@yutube.com", "123456")     // Valid Email and password
         home.goToHomePage()                 // Refirect to home page
         cy.title().should("eq","My Store")      // Validate Title of home page
         home.searchProduct("dress")             // search product on site
